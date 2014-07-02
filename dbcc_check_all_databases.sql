@@ -15,16 +15,11 @@ SET @script = ''
 
 WHILE @@FETCH_STATUS = 0 
 BEGIN  
-
 	  --PRINT @dbname
 	  SET @script = @script + 'DBCC CHECKDB ('''+@dbname+''') WITH NO_INFOMSGS
-	  
-	  
-	  
-	  
+	    
 '
 	  FETCH NEXT FROM db_cursor INTO @dbname
-	  
 	  
 END 
 
